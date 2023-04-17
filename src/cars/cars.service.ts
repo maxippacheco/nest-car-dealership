@@ -74,12 +74,18 @@ export class CarsService {
 
 	delete( id: string ){
 
-		const carDB = this.findOneById( id );
 		//!my solution
+		// const carDB = this.findOneById( id );
 		//const idx = this.cars.indexOf(carDB);
 		//this.cars.splice(idx, 1);
 		this.cars = this.cars.filter( car => car.id !== id );
 
 	}
+
+	fillCarsWithSeedData( cars: Car[] ){
+		this.cars = cars;
+	}
+
+
 
 }
